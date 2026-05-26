@@ -34,7 +34,14 @@ const translations = {
 let currentLang = 'en';
 let currentPage = 'Home';
 
-// 3. Function to change pages (Updated to respect the active language)
+// 3. Helper to set translated text and preserve line breaks
+function setTranslatedText(element, key) {
+    const translation = translations[currentLang][key];
+    if (!translation) return;
+    element.innerHTML = translation.replace(/\n/g, '<br>');
+}
+
+// 4. Function to change pages (Updated to respect the active language)
 function changePage(pageName) {
     currentPage = pageName; // Save which page view we are on
     
@@ -49,11 +56,11 @@ function changePage(pageName) {
     subheading.setAttribute('data-key', `${keyPrefix}-subheading`);
 
     // Fetch the correct translation from our dictionary
-    heading.textContent = translations[currentLang][`${keyPrefix}-heading`];
-    subheading.textContent = translations[currentLang][`${keyPrefix}-subheading`];
+    setTranslatedText(heading, `${keyPrefix}-heading`);
+    setTranslatedText(subheading, `${keyPrefix}-subheading`);
 }
 
-// 4. Function to toggle the language back and forth
+// 5. Function to toggle the language back and forth
 function toggleLanguage() {
     const toggleBtn = document.getElementById('lang-toggle');
 
@@ -72,8 +79,10 @@ function toggleLanguage() {
     // Loop through them and swap their text based on our dictionary
     elementsToTranslate.forEach(element => {
         const key = element.getAttribute('data-key');
-        if (translations[currentLang][key]) {
-            element.textContent = translations[currentLang][key];
-        }
+        setTranslatedText(element, key);
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    changePage('Home');
+});
