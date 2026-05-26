@@ -1,7 +1,10 @@
 /* Enable Smooth Scrolling when links are clicked */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 70px; /* Prevents the sticky menu from covering up section titles */
+}
+
+header[id], section[id] {
+    scroll-margin-top: 110px; /* Prevents the sticky menu from covering section titles */
 }
 
 * {
