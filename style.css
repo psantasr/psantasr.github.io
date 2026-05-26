@@ -10,10 +10,9 @@ html {
     box-sizing: border-box;
 }
 
-/* Page Frame Colors */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1a1a1a; /* Dark border color around the canvas */
+    background-color: #1a1a1a; /* Dark gray outer frame background */
 }
 
 /* Top Menu Bar Layout */
@@ -73,7 +72,7 @@ body {
 .hero-section {
     background-color: #1a1a1a;
     min-height: 100vh;
-    padding: 70px 20px 20px 20px; /* Leave space for navbar */
+    padding: 90px 20px 20px 20px; /* Space for navbar */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,11 +80,11 @@ body {
 
 /* The Beautiful Rounded Canvas Card */
 .hero-container {
-    background-color: #ebebeb; /* Off-white look from your screenshot */
+    background-color: #ebebeb; /* Light off-white gray canvas background */
     border-radius: 24px;
     width: 100%;
     max-width: 1200px;
-    min-height: 85vh;
+    min-height: 80vh;
     padding: 60px;
     display: flex;
     align-items: center;
@@ -95,7 +94,7 @@ body {
 
 /* Left Column Text Alignments */
 .hero-text-side {
-    flex: 12;
+    flex: 1.2;
     text-align: left;
     color: #111111;
 }
@@ -111,6 +110,7 @@ body {
     font-weight: 800;
     margin-bottom: 20px;
     letter-spacing: -1px;
+    color: #111111;
 }
 
 .hero-bio {
@@ -138,7 +138,7 @@ body {
 
 /* Right Column Image Layout */
 .hero-image-side {
-    flex: 10;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
