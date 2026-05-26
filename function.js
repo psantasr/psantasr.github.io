@@ -8,7 +8,7 @@ const translations = {
         "home-heading": "Welcome to My Portfolio!",
         "home-subheading": "Scroll down or use the menu to explore.",
         "about-heading": "About Me",
-        "about-text": "I am a creator building cool things on GitHub. Welcome to my space!",
+        "about-text": "I am a Mechanical Engineering graduate with minors in Biomedical and Robotics Engineering, focused on product development. Proven track record of delivering projects on time, on cost, and on spec while supporting cross-functional teams through DFMA-driven design optimization. Skilled in 3D modeling, prototyping, and iterative design using tools like SolidWorks and Onshape. Complemented by research experiencedesigning precision jigs for biomedical experiments, demonstrating strong problem-solving and critical thinking abilities.",
         "projects-heading": "My Projects",
         "projects-text": "Check out my latest work and case studies below.",
         "contact-heading": "Get In Touch",
