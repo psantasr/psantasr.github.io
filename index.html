@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,21 +11,22 @@
     <nav class="navbar">
         <div class="logo">My Brand</div>
         <ul class="nav-menu">
-            <li><a href="#" onclick="changePage('Home')">Home</a></li>
-            <li><a href="#" onclick="changePage('About')">About</a></li>
-            <li><a href="#" onclick="changePage('Projects')">Projects</a></li>
-            <li><a href="#" onclick="changePage('Contact')">Contact</a></li>
+            <li><a href="#" onclick="changePage('Home')" data-key="nav-home">Home</a></li>
+            <li><a href="#" onclick="changePage('About')" data-key="nav-about">About</a></li>
+            <li><a href="#" onclick="changePage('Projects')" data-key="nav-projects">Projects</a></li>
+            <li><a href="#" onclick="changePage('Contact')" data-key="nav-contact">Contact</a></li>
+            
+            <li><button id="lang-toggle" onclick="toggleLanguage()">ESP</button></li>
         </ul>
     </nav>
 
     <header class="hero-background">
         <div class="welcome-text">
-            <h1 id="main-heading">Welcome to My Portfolio!</h1>
-            <p id="sub-heading">Click the menu items above to interact.</p>
+            <h1 id="main-heading" data-key="home-heading">Welcome to My Portfolio!</h1>
+            <p id="sub-heading" data-key="home-subheading">Click the menu items above to interact.</p>
         </div>
     </header>
 
     <script src="script.js"></script>
-
 </body>
 </html>
