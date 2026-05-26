@@ -9,7 +9,6 @@
 <body>
 
     <nav class="navbar">
-        <div class="logo">My Brand</div>
         <ul class="nav-menu">
             <li><a href="#home" data-key="nav-home">Home</a></li>
             <li><a href="#about" data-key="nav-about">About</a></li>
@@ -19,10 +18,31 @@
         </ul>
     </nav>
 
-    <header id="home" class="hero-background">
-        <div class="welcome-text">
-            <h1 data-key="home-heading">Welcome to My Portfolio!</h1>
-            <p data-key="home-subheading">Scroll down or use the menu to explore.</p>
+    <header id="home" class="hero-section">
+        <div class="hero-container">
+            
+            <div class="hero-text-side">
+                <p class="intro-greeting" data-key="home-greeting">Hi, this is</p>
+                <h1 class="hero-name" data-key="home-name">Your Name.</h1>
+                <p class="hero-bio" data-key="home-bio">
+                    As a passionate creator specializing in web development, I build custom digital experiences and interactive tools on GitHub.
+                </p>
+                <p class="hero-sub-bio" data-key="home-subheading">
+                    Scroll down or use the menu items above to explore my work.
+                </p>
+                
+                <div class="tech-icons">
+                    <span class="icon-placeholder">🌐</span>
+                    <span class="icon-placeholder">💻</span>
+                    <span class="icon-placeholder">⚙️</span>
+                    <span class="icon-placeholder">🚀</span>
+                </div>
+            </div>
+
+            <div class="hero-image-side">
+                <img src="illustration.png" alt="Developer Illustration" class="developer-art">
+            </div>
+
         </div>
     </header>
 
@@ -41,6 +61,6 @@
         <p data-key="contact-text">Email me at: myemail@example.com</p>
     </section>
 
-    <script src="function.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
