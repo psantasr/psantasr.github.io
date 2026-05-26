@@ -6,13 +6,13 @@ const translations = {
         "nav-projects": "Projects",
         "nav-contact": "Contact",
         "home-heading": "Welcome to My Portfolio!",
-        "home-subheading": "Click the menu items above to interact.",
+        "home-subheading": "Scroll down or use the menu to explore.",
         "about-heading": "About Me",
-        "about-subheading": "I am a creator building cool things on GitHub.",
+        "about-text": "I am a creator building cool things on GitHub. Welcome to my space!",
         "projects-heading": "My Projects",
-        "projects-subheading": "Check out my latest work and case studies.",
+        "projects-text": "Check out my latest work and case studies below.",
         "contact-heading": "Get In Touch",
-        "contact-subheading": "Email me at: paulasantas@outlook.com\nLinkedIn: linkedin.com/in/psantasr\nGitHub: github.com/psantasr"
+        "contact-text": "Email me at: paulasantas@outlook.com\nLinkedIn: linkedin.com/in/psantasr\nGitHub: github.com/psantasr"
     },
     es: {
         "nav-home": "Inicio",
@@ -20,19 +20,18 @@ const translations = {
         "nav-projects": "Proyectos",
         "nav-contact": "Contacto",
         "home-heading": "¡Bienvenido a mi Portafolio!",
-        "home-subheading": "Haz clic en los elementos del menú para interactuar.",
+        "home-subheading": "Desplázate hacia abajo o usa el menú para explorar.",
         "about-heading": "Sobre Mí",
-        "about-subheading": "Soy un creador desarrollando cosas geniales en GitHub.",
+        "about-text": "Soy un creador desarrollando cosas geniales en GitHub. ¡Bienvenido a mi espacio!",
         "projects-heading": "Mis Proyectos",
-        "projects-subheading": "Mira mis últimos trabajos y casos de estudio.",
+        "projects-text": "Mira mis últimos trabajos y casos de estudio a continuación.",
         "contact-heading": "Contacto",
-        "contact-subheading": "paulasantas@outlook.com\nLinkedIn: linkedin.com/in/psantasr\nGitHub: github.com/psantasr"
+        "contact-text": "paulasantas@outlook.com\nLinkedIn: linkedin.com/in/psantasr\nGitHub: github.com/psantasr"
     }
 };
 
-// 2. Track the current language and current active page view
+// 2. Track the current language
 let currentLang = 'en';
-let currentPage = 'Home';
 
 // 3. Helper to set translated text and preserve line breaks
 function setTranslatedText(element, key) {
@@ -40,25 +39,21 @@ function setTranslatedText(element, key) {
     if (!translation) return;
     element.innerHTML = translation.replace(/\n/g, '<br>');
 }
-// 5. Function to toggle the language back and forth
-function toggleLanguage() {
-    const toggleBtn = document.getElementById('lang-toggle');
 
-    // Switch the language variable
-    if (currentLang === 'en') {
-        currentLang = 'es';
-        toggleBtn.textContent = "ENG"; // Button shows the option to switch back
-    } else {
-        currentLang = 'en';
-        toggleBtn.textContent = "ESP";
-    }
-
-    // Find ALL elements on the page that have a "data-key" attribute
-    const elementsToTranslate = document.querySelectorAll('[data-key]');
-
-    // Loop through them and swap their text based on our dictionary
-    elementsToTranslate.forEach(element => {
+// 4. Translate the whole page
+function translatePage() {
+    document.querySelectorAll('[data-key]').forEach(element => {
         const key = element.getAttribute('data-key');
         setTranslatedText(element, key);
     });
 }
+
+// 5. Function to toggle the language back and forth
+function toggleLanguage() {
+    const toggleBtn = document.getElementById('lang-toggle');
+    currentLang = currentLang === 'en' ? 'es' : 'en';
+    toggleBtn.textContent = currentLang === 'en' ? 'ESP' : 'ENG';
+    translatePage();
+}
+
+document.addEventListener('DOMContentLoaded', translatePage);
