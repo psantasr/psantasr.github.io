@@ -29,5 +29,19 @@
     <footer>
         <p>Connect with me via email or LinkedIn!</p>
     </footer>
+    <script>
+    // 1. Find the button and the counter text on the page
+    const button = document.getElementById('likeBtn');
+    const counterText = document.getElementById('likeCount');
+    
+    // 2. Set a starting number of likes
+    let count = 0;
+
+    // 3. Tell the button to listen for a click
+    button.addEventListener('click', function() {
+        count = count + 1; // Increase the count by 1
+        counterText.textContent = count + " people liked this"; // Update the text on the screen
+    });
+    </script>
 </body>
 </html>
