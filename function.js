@@ -8,11 +8,11 @@ const translations = {
         "home-heading": "Welcome to My Portfolio!",
         "home-subheading": "Scroll down or use the menu to explore.",
         "about-heading": "About Me",
-        "about-text": "I am a Mechanical Engineering graduate with minors in Biomedical and Robotics Engineering, focused on product development. Proven track record of delivering projects on time, on cost, and on spec while supporting cross-functional teams through DFMA-driven design optimization. Skilled in 3D modeling, prototyping, and iterative design using tools like SolidWorks and Onshape. Complemented by research experiencedesigning precision jigs for biomedical experiments, demonstrating strong problem-solving and critical thinking abilities.",
+        "about-text": "I am a creator building cool things on GitHub. Welcome to my space!",
         "projects-heading": "My Projects",
         "projects-text": "Check out my latest work and case studies below.",
         "contact-heading": "Get In Touch",
-        "contact-text": "Email me at: paulasantas@outlook.com\nLinkedIn: linkedin.com/in/psantasr\nGitHub: github.com/psantasr"
+        "contact-text": "Email me at: myemail@example.com"
     },
     es: {
         "nav-home": "Inicio",
@@ -26,7 +26,7 @@ const translations = {
         "projects-heading": "Mis Proyectos",
         "projects-text": "Mira mis últimos trabajos y casos de estudio a continuación.",
         "contact-heading": "Contacto",
-        "contact-text": "paulasantas@outlook.com\nLinkedIn: linkedin.com/in/psantasr\nGitHub: github.com/psantasr"
+        "contact-text": "Envíame un correo a: myemail@example.com"
     }
 };
 
