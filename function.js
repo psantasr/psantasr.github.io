@@ -12,7 +12,7 @@ const translations = {
         "projects-heading": "My Projects",
         "projects-subheading": "Check out my latest work and case studies.",
         "contact-heading": "Get In Touch",
-        "contact-subheading": "Email me at: myemail@example.com"
+        "contact-subheading": "Email me at: paulasantas@outlook.com\nLinkedIn: linkedin.com/in/psantasr\nGitHub: github.com/psantasr"
     },
     es: {
         "nav-home": "Inicio",
@@ -26,7 +26,7 @@ const translations = {
         "projects-heading": "Mis Proyectos",
         "projects-subheading": "Mira mis últimos trabajos y casos de estudio.",
         "contact-heading": "Contacto",
-        "contact-subheading": "Envíame un correo a: miemail@example.com"
+        "contact-subheading": "paulasantas@outlook.com\nLinkedIn: linkedin.com/in/psantasr\nGitHub: github.com/psantasr"
     }
 };
 
