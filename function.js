@@ -1,7 +1,7 @@
 const translations = {
     en: {
         "nav-home": "Home",
-        "nav-about": "About",
+        "nav-about": "Work Experience",
         "nav-projects": "Projects",
         "nav-contact": "Contact",
         "home-greeting": "Hi, this is",
@@ -17,7 +17,7 @@ const translations = {
     },
     es: {
         "nav-home": "Inicio",
-        "nav-about": "Sobre Mí",
+        "nav-about": "Experiencia",
         "nav-projects": "Proyectos",
         "nav-contact": "Contacto",
         "home-greeting": "Hola, mi nombre es",
