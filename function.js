@@ -40,26 +40,6 @@ function setTranslatedText(element, key) {
     if (!translation) return;
     element.innerHTML = translation.replace(/\n/g, '<br>');
 }
-
-// 4. Function to change pages (Updated to respect the active language)
-function changePage(pageName) {
-    currentPage = pageName; // Save which page view we are on
-    
-    const heading = document.getElementById('main-heading');
-    const subheading = document.getElementById('sub-heading');
-
-    // Convert page name to lowercase to match our dictionary keys (e.g., 'about')
-    const keyPrefix = pageName.toLowerCase(); 
-
-    // Dynamically set the data-key so the translator knows what text this element holds
-    heading.setAttribute('data-key', `${keyPrefix}-heading`);
-    subheading.setAttribute('data-key', `${keyPrefix}-subheading`);
-
-    // Fetch the correct translation from our dictionary
-    setTranslatedText(heading, `${keyPrefix}-heading`);
-    setTranslatedText(subheading, `${keyPrefix}-subheading`);
-}
-
 // 5. Function to toggle the language back and forth
 function toggleLanguage() {
     const toggleBtn = document.getElementById('lang-toggle');
@@ -82,7 +62,3 @@ function toggleLanguage() {
         setTranslatedText(element, key);
     });
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    changePage('Home');
-});

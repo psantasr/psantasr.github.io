@@ -1,44 +1,35 @@
-/* Reset default browser margins */
+/* Enable Smooth Scrolling when links are clicked */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* Prevents the sticky menu from covering up section titles */
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
 }
 
-/* Background Image Styling */
-.hero-background {
-    /* Make sure background.jpg matches your uploaded image name */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.png');
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-/* Interactive Navigation Menu Bar */
+/* Menu stays permanently at top layer */
 .navbar {
-    position: absolute;
+    position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
 }
 
 .logo {
+    color: white;
     font-size: 24px;
     font-weight: bold;
 }
@@ -63,17 +54,6 @@ body, html {
     color: #ffcc00; 
 }
 
-/* Welcome Text Styling */
-.welcome-text h1 {
-    font-size: 50px;
-    margin-bottom: 10px;
-}
-
-.welcome-text p {
-    font-size: 22px;
-}
-
-/* Style for the Language Toggle Button */
 #lang-toggle {
     background: transparent;
     border: 1px solid white;
@@ -88,4 +68,56 @@ body, html {
 #lang-toggle:hover {
     background-color: white;
     color: black;
+}
+
+/* Hero Background Section */
+.hero-background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.welcome-text h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+/* New Content Sections Styling */
+.content-section {
+    padding: 100px 20px; /* Gives plenty of spacing top and bottom */
+    text-align: center;
+    min-height: 60vh; /* Makes each section tall enough to feel like a real page block */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    font-size: 20px;
+    max-width: 600px;
+}
+
+/* Alternating Background Colors for the sections */
+.dark-section {
+    background-color: #222;
+    color: white;
+}
+
+.light-section {
+    background-color: #f4f4f4;
+    color: #333;
 }

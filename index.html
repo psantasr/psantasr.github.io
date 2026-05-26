@@ -11,22 +11,36 @@
     <nav class="navbar">
         <div class="logo">My Brand</div>
         <ul class="nav-menu">
-            <li><a href="#" onclick="changePage('Home')" data-key="nav-home">Home</a></li>
-            <li><a href="#" onclick="changePage('About')" data-key="nav-about">About</a></li>
-            <li><a href="#" onclick="changePage('Projects')" data-key="nav-projects">Projects</a></li>
-            <li><a href="#" onclick="changePage('Contact')" data-key="nav-contact">Contact</a></li>
-            
+            <li><a href="#home" data-key="nav-home">Home</a></li>
+            <li><a href="#about" data-key="nav-about">About</a></li>
+            <li><a href="#projects" data-key="nav-projects">Projects</a></li>
+            <li><a href="#contact" data-key="nav-contact">Contact</a></li>
             <li><button id="lang-toggle" onclick="toggleLanguage()">ESP</button></li>
         </ul>
     </nav>
 
-    <header class="hero-background">
+    <header id="home" class="hero-background">
         <div class="welcome-text">
-            <h1 id="main-heading" data-key="home-heading">Welcome to My Portfolio!</h1>
-            <p id="sub-heading" data-key="home-subheading">Click the menu items above to interact.</p>
+            <h1 data-key="home-heading">Welcome to My Portfolio!</h1>
+            <p data-key="home-subheading">Scroll down or use the menu to explore.</p>
         </div>
     </header>
 
-    <script src="function.js"></script>
+    <section id="about" class="content-section dark-section">
+        <h2 data-key="about-heading">About Me</h2>
+        <p data-key="about-text">I am a creator building cool things on GitHub. Welcome to my space!</p>
+    </section>
+
+    <section id="projects" class="content-section light-section">
+        <h2 data-key="projects-heading">My Projects</h2>
+        <p data-key="projects-text">Check out my latest work and case studies below.</p>
+    </section>
+
+    <section id="contact" class="content-section dark-section">
+        <h2 data-key="contact-heading">Get In Touch</h2>
+        <p data-key="contact-text">Email me at: myemail@example.com</p>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
