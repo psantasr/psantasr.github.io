@@ -1,7 +1,7 @@
 /* Enable Smooth Scrolling when links are clicked */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px; /* Keeps sticky navbar from covering titles */
+    scroll-padding-top: 100px; 
 }
 
 * {
@@ -10,7 +10,6 @@ html {
     box-sizing: border-box;
 }
 
-/* Base Body: The dark charcoal framing color */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #1a1a1a; 
@@ -70,21 +69,21 @@ body {
     border-color: white;
 }
 
-/* THE OUTER WRAPPER: Creates the dark side margins and bottom margin frame */
+/* THE OUTER WRAPPER: Creates the ultra-thin 1mm framing look */
 .page-frame {
     background-color: #1a1a1a;
-    padding: 70px 6px 6px 6px; /* 70px matches header height, 40px sets edge frames */
+    padding: 70px 6px 6px 6px; /* 70px top clears navbar; 6px frames sides and bottom */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* THE MASTER CANVAS: Pure white continuous card background */
+/* THE MASTER CANVAS: Continuous clean white sheet */
 .main-canvas {
-    background-color: #ffffff; /* FIXED: Pure white layout card like Patrick's site */
+    background-color: #ffffff; 
     border-radius: 16px;       
     width: 100%;
-    max-width: 100%;
+    max-width: 100%;           
     margin: 0 auto;            
     overflow: hidden;          
     min-height: 100%;          
@@ -96,7 +95,7 @@ body {
 /* Hero Landing Section inside your White Canvas */
 .hero-section {
     min-height: 85vh;
-    padding: 60px 100px;
+    padding: 60px 8%; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,17 +148,31 @@ body {
     align-items: center;
 }
 
-.developer-art {
+/* SLOW SPINNING GEAR ILLUSTRATION */
+.welcome-gear {
     width: 100%;
-    max-width: 320px;
+    max-width: 360px; 
     height: auto;
+    display: block;
+    animation: slowGearTurn 25s linear infinite; 
+    transform-origin: center center; 
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.05)); 
+}
+
+@keyframes slowGearTurn {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Inner Sections (Experience, Projects, Contact) - All staying white as you scroll */
 .content-section {
-    padding: 100px 100px;
+    padding: 100px 8%;
     text-align: left; 
-    border-top: 1px solid #ebebeb; /* Soft light-grey divider line over the white card */
+    border-top: 1px solid #ebebeb; 
     background-color: transparent !important; 
     color: #111111 !important;            
 }
