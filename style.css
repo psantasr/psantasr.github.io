@@ -135,11 +135,30 @@ body {
     color: #555555;
 }
 
+/* Icon Row Setup */
 .tech-icons {
     display: flex;
-    gap: 15px;
-    margin-top: 25px;
-    font-size: 24px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Style the LinkedIn SVG Link */
+.linkedin-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.linkedin-svg {
+    width: 32px; 
+    height: 32px;
+    fill: #111111; /* Clean dark gray outline appearance */
+    transition: transform 0.2s ease;
+}
+
+.linkedin-svg:hover {
+    transform: scale(1.15); /* Sleek hover pop */
 }
 
 .hero-image-side {
