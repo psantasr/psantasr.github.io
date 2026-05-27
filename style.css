@@ -1,205 +1,31 @@
-/* Enable Smooth Scrolling when links are clicked */
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 70px;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1a1a1a; /* Dark gray outer frame background */
-}
-
-/* Top Menu Bar Layout */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: flex-end; /* Align menu to the right side */
-    background-color: #1a1a1a;
-    z-index: 1000;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    align-items: center;
-}
-
-.nav-menu li {
-    margin-left: 25px;
-}
-
-.nav-menu a {
-    color: #999999;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.nav-menu a:hover {
-    color: white; 
-}
-
-/* Language Toggle Button styling */
-#lang-toggle {
-    background: transparent;
-    border: 1px solid #555555;
-    color: #999999;
-    padding: 4px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 13px;
-    transition: 0.3s;
-}
-
-#lang-toggle:hover {
-    background-color: white;
-    color: black;
-    border-color: white;
-}
-
-.page-frame {
-    background-color: #1a1a1a; /* Dark gray outer frame background */
-    padding: 70px 40px 40px 40px;
-    min-height: 100vh;
-}
-
+/* ==========================================================================
+   THE UNIFIED CANVAS (Locks the grey background for the entire page length)
+   ========================================================================== */
 .main-canvas {
-    background-color: #ebebeb; /* Light off-white gray canvas background */
-    border-radius: 24px;
+    background-color: #ebebeb; /* Continuous light grey canvas */
+    border-radius: 24px;       
     width: 100%;
     max-width: 1400px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-/* Main Hero Section Wrapper */
-.hero-section {
-    background-color: #1a1a1a;
-    min-height: 100vh;
-    padding: 90px 20px 20px 20px; /* Space for navbar */
+    margin: 0 auto;            
+    overflow: hidden;          
+    min-height: 100%;          /* CHANGED: Forces the grey container to stretch all the way to the bottom */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
-/* Left Column Text Alignments */
-.hero-text-side {
-    max-width: 440px; 
-    text-align: left;
-    color: #111111;
-}
-
-.intro-greeting {
-    font-size: 16px;
-    color: #666666;
-    margin-bottom: 5px;
-}
-
-.hero-name {
-    font-size: 52px;
-    font-weight: 800;
-    margin-bottom: 20px;
-    letter-spacing: -1px;
-    color: #111111;
-}
-
-.hero-bio {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #222222;
-    margin-bottom: 15px;
-    max-width: 480px;
-}
-
-.hero-sub-bio {
-    font-size: 15px;
-    line-height: 1.6;
-    color: #555555;
-    max-width: 480px;
-}
-
-/* Icon Row Layout */
-.tech-icons {
-    display: flex;
-    gap: 15px;
-    margin-top: 25px;
-    font-size: 24px;
-}
-
-/* Right Column Image Layout */
-.hero-image-side {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.developer-art {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-}
-
-/* Alternating Lower Sections Settings */
+/* ==========================================================================
+   INNER SECTIONS (Experience, Projects, Contact)
+   ========================================================================== */
 .content-section {
     padding: 100px 100px;
-    text-align: left; /* Shift text left to match typical resume alignments */
-    border-top: 1px solid #dbdbdb; /* Subtle division line between sections like Patrick's site */
-    color: #111111;
+    text-align: left; 
+    border-top: 1px solid #dbdbdb; /* Clean divider line just like Patrick's site */
+    
+    /* REMOVED .dark-section & .light-section references */
+    /* REMOVED min-height: 60vh; to allow content to dictate natural height */
+    background-color: transparent !important; /* FORCES sections to use the main-canvas grey background */
+    color: #111111 !important;            /* FORCES text to remain sharp and dark gray everywhere */
 }
 
-.content-section h2 {
-    font-size: 32px;
-    margin-bottom: 25px;
-    font-weight: 700;
-}
-
-.content-section p {
-    font-size: 16px;
-    max-width: 800px;
-    line-height: 1.6;
-}
-
-.dark-section {
-    background-color: #1a1a1a;
-    color: white;
-}
-
-.light-section {
-    background-color: #ebebeb;
-    color: #111111;
-}
-
-/* Mobile Responsiveness Rules */
-@media (max-width: 768px) {
-    .page-frame {
-        padding: 70px 15px 15px 15px;
-    }
-    .hero-section {
-        flex-direction: column-reverse;
-        padding: 40px 20px;
-        text-align: center;
-    }
-    .hero-text-side {
-        text-align: center;
-    }
-    .hero-name {
-        font-size: 36px;
-    }
-    .tech-icons {
-        justify-content: center;
-    }
-    .content-section {
-        padding: 60px 20px;
-    }
-}
+/* Delete or comment out any old rules for .dark-section and .light-section 
+   at the bottom of your file so they stop conflicting! */
