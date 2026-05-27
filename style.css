@@ -148,6 +148,8 @@ body {
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    width: 32px;
+    height: 32px;
 }
 
 .linkedin-svg {
