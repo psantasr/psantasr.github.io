@@ -73,21 +73,24 @@ body {
 /* THE OUTER WRAPPER: Creates the dark side margins and bottom margin frame */
 .page-frame {
     background-color: #1a1a1a;
-    padding: 70px 40px 40px 40px; /* 70px matches header height, 40px sets edge frames */
+    padding: 70px 6px 6px 6px; /* 70px matches header height, 40px sets edge frames */
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* THE MASTER CANVAS: Pure white continuous card background */
 .main-canvas {
     background-color: #ffffff; /* FIXED: Pure white layout card like Patrick's site */
-    border-radius: 24px;       
+    border-radius: 16px;       
     width: 100%;
-    max-width: 1400px;
+    max-width: 100%;
     margin: 0 auto;            
     overflow: hidden;          
     min-height: 100%;          
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 /* Hero Landing Section inside your White Canvas */
