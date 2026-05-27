@@ -1,8 +1,85 @@
-/* ==========================================================================
-   THE UNIFIED CANVAS (Locks the grey background for the entire page length)
-   ========================================================================== */
+/* Enable Smooth Scrolling when links are clicked */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Keeps sticky navbar from covering titles */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Body: The dark charcoal framing color */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a; 
+}
+
+/* Static Navigation Bar at the Top */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 60px;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    background-color: #1a1a1a;
+    z-index: 1000;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-menu li {
+    margin-left: 25px;
+}
+
+.nav-menu a {
+    color: #999999;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: white; 
+}
+
+#lang-toggle {
+    background: transparent;
+    border: 1px solid #555555;
+    color: #999999;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+#lang-toggle:hover {
+    background-color: white;
+    color: black;
+    border-color: white;
+}
+
+/* THE OUTER WRAPPER: Creates the dark side margins and bottom margin frame */
+.page-frame {
+    background-color: #1a1a1a;
+    padding: 70px 40px 40px 40px; /* 70px matches header height, 40px sets edge frames */
+    min-height: 100vh;
+}
+
+/* THE MASTER CANVAS: Pure white continuous card background */
 .main-canvas {
-    background-color: #ffffff; /* CHANGED: Gives you that crisp, clean white background card like Patrick's site */
+    background-color: #ffffff; /* FIXED: Pure white layout card like Patrick's site */
     border-radius: 24px;       
     width: 100%;
     max-width: 1400px;
@@ -13,16 +90,109 @@
     flex-direction: column;
 }
 
-/* ==========================================================================
-   INNER SECTIONS (Experience, Projects, Contact)
-   ========================================================================== */
+/* Hero Landing Section inside your White Canvas */
+.hero-section {
+    min-height: 85vh;
+    padding: 60px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.hero-text-side {
+    max-width: 440px;
+    text-align: left;
+    color: #111111;
+}
+
+.intro-greeting {
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 5px;
+}
+
+.hero-name {
+    font-size: 52px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    color: #111111;
+}
+
+.hero-bio {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #222222;
+    margin-bottom: 15px;
+}
+
+.hero-sub-bio {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555555;
+}
+
+.tech-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    font-size: 24px;
+}
+
+.hero-image-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.developer-art {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+}
+
+/* Inner Sections (Experience, Projects, Contact) - All staying white as you scroll */
 .content-section {
     padding: 100px 100px;
     text-align: left; 
-    border-top: 1px solid #ebebeb; /* CHANGED: Makes the divider lines a subtle light grey over the new white layout */
-    background-color: transparent !important; /* Locks the sections to the white canvas */
+    border-top: 1px solid #ebebeb; /* Soft light-grey divider line over the white card */
+    background-color: transparent !important; 
     color: #111111 !important;            
 }
 
-/* Delete or comment out any old rules for .dark-section and .light-section 
-   at the bottom of your file so they stop conflicting! */
+.content-section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.content-section p {
+    font-size: 16px;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+/* Mobile Responsiveness Rules */
+@media (max-width: 768px) {
+    .page-frame {
+        padding: 70px 15px 15px 15px;
+    }
+    .hero-section {
+        flex-direction: column-reverse;
+        padding: 40px 20px;
+        text-align: center;
+    }
+    .hero-text-side {
+        text-align: center;
+    }
+    .hero-name {
+        font-size: 36px;
+    }
+    .tech-icons {
+        justify-content: center;
+    }
+    .content-section {
+        padding: 60px 20px;
+    }
+}
