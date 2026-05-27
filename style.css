@@ -2,13 +2,13 @@
    THE UNIFIED CANVAS (Locks the grey background for the entire page length)
    ========================================================================== */
 .main-canvas {
-    background-color: #ebebeb; /* Continuous light grey canvas */
+    background-color: #ffffff; /* CHANGED: Gives you that crisp, clean white background card like Patrick's site */
     border-radius: 24px;       
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;            
     overflow: hidden;          
-    min-height: 100%;          /* CHANGED: Forces the grey container to stretch all the way to the bottom */
+    min-height: 100%;          
     display: flex;
     flex-direction: column;
 }
@@ -19,12 +19,9 @@
 .content-section {
     padding: 100px 100px;
     text-align: left; 
-    border-top: 1px solid #dbdbdb; /* Clean divider line just like Patrick's site */
-    
-    /* REMOVED .dark-section & .light-section references */
-    /* REMOVED min-height: 60vh; to allow content to dictate natural height */
-    background-color: transparent !important; /* FORCES sections to use the main-canvas grey background */
-    color: #111111 !important;            /* FORCES text to remain sharp and dark gray everywhere */
+    border-top: 1px solid #ebebeb; /* CHANGED: Makes the divider lines a subtle light grey over the new white layout */
+    background-color: transparent !important; /* Locks the sections to the white canvas */
+    color: #111111 !important;            
 }
 
 /* Delete or comment out any old rules for .dark-section and .light-section 
