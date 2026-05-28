@@ -139,6 +139,7 @@ body {
 .tech-icons {
     display: flex;
     align-items: center;
+    gap: 30px;
     margin-top: 30px;
 }
 
@@ -181,6 +182,27 @@ body {
 }
 
 .linkedin-svg:hover {
+    transform: scale(1.12); /* Sleek hover pop */
+}
+
+/* Style the github SVG Link */
+.github-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 36px;
+    height: 36px;
+}
+
+.github-svg {
+    width: 100%; 
+    height: 100%;
+    fill: #111111; /* Clean dark gray outline appearance */
+    transition: transform 0.2s ease;
+}
+
+.github-svg:hover {
     transform: scale(1.12); /* Sleek hover pop */
 }
 
