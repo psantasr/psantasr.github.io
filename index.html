@@ -68,21 +68,44 @@
                     <div class="slider-timeline-axis">
                         <div class="timeline-progress-bar" id="timelineProgress"></div>
                         
+                        <!-- Node 1 (Job 1) -->
                         <button class="slider-node active" onclick="switchTimelineJob(0, this)">
-                            <span class="node-year">2024</span>
                             <div class="node-indicator-dot"></div>
+                            <div class="timeline-tooltip">
+                                <strong data-key="job1-title">Product Development Engineer</strong>
+                                <span>@ <span data-key="job1-company">Spin Master Ltd.</span></span>
+                                <small data-key="job1-date">August 2024 - Current</small>
+                            </div>
                         </button>
+
+                        <!-- Node 2 (Job 2) -->
                         <button class="slider-node" onclick="switchTimelineJob(1, this)">
-                            <span class="node-year">2023</span>
                             <div class="node-indicator-dot"></div>
+                            <div class="timeline-tooltip">
+                                <strong data-key="job2-title">R&D Mechanical Engineer</strong>
+                                <span>@ <span data-key="job2-company">Sunnybrook Hospital Research Institute (FUS Lab)</span></span>
+                                <small data-key="job2-date">June 2023 - August 2024</small>
+                            </div>
                         </button>
+
+                        <!-- Node 3 (Job 3) -->
                         <button class="slider-node" onclick="switchTimelineJob(2, this)">
-                            <span class="node-year">2022</span>
                             <div class="node-indicator-dot"></div>
+                            <div class="timeline-tooltip">
+                                <strong data-key="job3-title">Engineering Innovation Intern</strong>
+                                <span>@ <span data-key="job3-company">Spin Master Ltd.</span></span>
+                                <small data-key="job3-date">May 2022 - August 2022</small>
+                            </div>
                         </button>
+
+                        <!-- Node 4 (Job 4) -->
                         <button class="slider-node" onclick="switchTimelineJob(3, this)">
-                            <span class="node-year">2021</span>
                             <div class="node-indicator-dot"></div>
+                            <div class="timeline-tooltip">
+                                <strong data-key="job4-title">Product Development Engineering Intern</strong>
+                                <span>@ <span data-key="job4-company">Spin Master Ltd.</span></span>
+                                <small data-key="job4-date">May 2021 - May 2022</small>
+                            </div>
                         </button>
                     </div>
 
@@ -93,18 +116,7 @@
                             <h3 class="job-panel-title">
                                 <span data-key="job1-title">Product Development Engineer</span> @ <span class="company-accent" data-key="job1-company">Spin Master Ltd.</span>
                             </h3>
-                            <p class="job-panel-desc" data-key="job1-desc">
-                                • Leading the development of over 15+ medium to high complexity toy products from concept to production, ensuring each is delivered on time, on cost, and on spec by actively managing timelines, cost, and technical feasibility. <br>
-                                • Created and revised complex 3D models and assemblies using SolidWorks and Onshape, supporting iterative design reviews,
-                                  internal CAD Checkpoints, and tooling development with internal teams and overseas manufacturers. <br>
-                                • Applied DFMA/DFM principles to optimize injection- and blow-molded parts, reducing part complexity and achieving average cost
-                                  savings of 10% per unit through material and tooling adjustments while still meeting spec. <br>
-                                • Collaborated with Asia, North America, and Europe-based vendors to resolve design-for-manufacturing issues, ensuring alignment between CAD intent and production capabilities while minimizing tooling delays. <br>
-                                • Drafted critical to consumer requirements, reviewed part quotations, and helped the internal team aligned on feature priorities to
-                                  support the sourcing team with price negotiations with the vendor. <br>
-                                • Provided regular updates to executive stakeholders on design iterations, play pattern feasibility, cost status, and redesign timelines,
-                                  directly influencing decision-making at cross-functional checkpoints.
-                            </p>
+                            <ul class="job-panel-desc" data-key="job1-desc"></ul>
                         </div>
 
                         <div class="job-card-panel" id="jobPanel-1">
@@ -112,9 +124,7 @@
                             <h3 class="job-panel-title">
                                 <span data-key="job2-title">R&D Mechanical Engineer</span> @ <span class="company-accent" data-key="job2-company">Sunnybrook Hospital Research Institute (FUS Lab)</span>
                             </h3>
-                            <p class="job-panel-desc" data-key="job2-desc">
-                                Collaborated with researchers and engineers to design and prototype custom components for experimental setups supporting focused ultrasound therapies. Created patient-centric molds and parts compliant with strict MRI and clinical environments using SolidWorks, 3D printing, and machining tools.
-                            </p>
+                            <ul class="job-panel-desc" data-key="job2-desc"></ul>
                         </div>
 
                         <div class="job-card-panel" id="jobPanel-2">
@@ -122,9 +132,7 @@
                             <h3 class="job-panel-title">
                                 <span data-key="job3-title">Engineering Innovation Intern</span> @ <span class="company-accent" data-key="job3-company">Spin Master Ltd.</span>
                             </h3>
-                            <p class="job-panel-desc" data-key="job3-desc">
-                                Designed and prototyped proof-of-concept mechanisms using SolidWorks, Fusion 360, and 3D printing. Achieved manufacturing cost reductions by optimizing material utilization and combining mechanical functions within structural CAD designs.
-                            </p>
+                            <ul class="job-panel-desc" data-key="job3-desc"></ul>
                         </div>
 
                         <div class="job-card-panel" id="jobPanel-3">
@@ -132,9 +140,7 @@
                             <h3 class="job-panel-title">
                                 <span data-key="job4-title">Product Development Engineering Intern</span> @ <span class="company-accent" data-key="job4-company">Spin Master Ltd.</span>
                             </h3>
-                            <p class="job-panel-desc" data-key="job4-desc">
-                                Managed 90+ projects across two consumer brands, providing early-stage cost estimation and feasibility studies. Led design alignment checkpoints with international global teams to proactively resolve manufacturing challenges and minimize production delays.
-                            </p>
+                            <ul class="job-panel-desc" data-key="job4-desc"></ul>
                         </div>
 
                     </div>

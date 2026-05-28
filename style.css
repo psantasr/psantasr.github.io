@@ -254,12 +254,12 @@ body {
 }
 
 /* ==========================================================================
-   DYNAMIC HORIZONTAL TIMELINE RULES (Patrick's Layout)
+   DYNAMIC HORIZONTAL TIMELINE RULES WITH INTERACTIVE TOOLTIPS
    ========================================================================== */
 .horizontal-timeline-wrapper {
     max-width: 850px;
     margin: 40px auto;
-    padding: 0 20px;
+    padding: 40px 20px 0 20px; /* Extra top padding prevents hover tooltips from clipping */
 }
 
 .section-intro {
@@ -277,7 +277,7 @@ body {
     width: 100%;
     height: 4px;
     background-color: #e0e0e0; 
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     margin-top: 50px;
 }
 
@@ -303,18 +303,8 @@ body {
     align-items: center;
     outline: none;
     z-index: 5;
-    padding: 0;
-}
-
-/* Year indicators floating above spine tracks */
-.node-year {
-    font-size: 14px;
-    font-weight: 700;
-    color: #888888;
-    margin-bottom: 10px;
-    position: absolute;
-    top: -32px;
-    transition: color 0.3s ease;
+    padding: 10px;
+    margin: -10px; /* Expands interactive hover area without affecting visual layout structure */
 }
 
 /* Intersecting dots */
@@ -334,17 +324,80 @@ body {
     transform: scale(1.1);
 }
 
-.slider-node.active .node-year {
-    color: #111111;
-}
-
 .slider-node.active .node-indicator-dot {
     background-color: #335c81; 
     transform: scale(1.3);
     border-color: #ffffff;
 }
 
-/* Tab Deck Window Shells */
+/* --------------------------------------------------------------------------
+   INTERACTIVE FLOATING TOOLTIP MOTOR (Inspired by image_938944.jpg)
+   -------------------------------------------------------------------------- */
+.timeline-tooltip {
+    position: absolute;
+    bottom: 32px; /* Position box floating completely clean above the track line */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    width: 260px;
+    background-color: rgba(45, 45, 45, 0.96); /* Elegant dark styling */
+    color: #ffffff;
+    padding: 12px 14px;
+    border-radius: 6px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.4;
+    pointer-events: none; /* Prevents text elements from blocking track cursors */
+    opacity: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 100;
+}
+
+/* Geometric anchor point pointing down directly at the current timeline node indicator dot */
+.timeline-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(45, 45, 45, 0.96) transparent transparent transparent;
+}
+
+/* Hover Action: Trigger tooltip entry animation smoothly on hover */
+.slider-node:hover .timeline-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Internal Tooltip Content Styling Typography */
+.timeline-tooltip strong {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 13.5px;
+}
+
+.timeline-tooltip span {
+    color: #dddddd;
+    font-size: 12.5px;
+}
+
+.timeline-tooltip small {
+    color: #999999;
+    margin-top: 3px;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --------------------------------------------------------------------------
+   TAB PANELS DISPLAY LAYOUT
+   -------------------------------------------------------------------------- */
 .timeline-display-window {
     position: relative;
     min-height: 220px;
@@ -392,11 +445,17 @@ body {
     font-weight: 700;
 }
 
+/* Itemized Unordered List Formatting Configuration */
 .job-panel-desc {
     font-size: 15px;
     line-height: 1.7;
     color: #444444;
-    white-space: pre-line;
+    list-style-type: disc;
+    padding-left: 20px; /* Snug indent padding for list bullets */
+}
+
+.job-panel-desc li {
+    margin-bottom: 10px; /* Clean gap breaks between loaded resume bullets */
 }
 
 /* Mobile Responsiveness Rules */
@@ -427,5 +486,9 @@ body {
     }
     .timeline-display-window {
         padding: 15px;
+    }
+    /* Disable floating hover effects on mobile systems to keep tracking simple */
+    .timeline-tooltip {
+        display: none !important;
     }
 }
