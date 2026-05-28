@@ -85,19 +85,17 @@ const translations = {
 
 let currentLang = 'en';
 
-// Función encargada de parsear los strings con '\n•' y transformarlos en elementos <li> nativos
+// Parses text blocks separating by '\n•' and converts them into native lists
 function renderJobDescriptions() {
     for (let i = 1; i <= 4; i++) {
         const descElements = document.querySelectorAll(`[data-key="job${i}-desc"]`);
         const descText = translations[currentLang][`job${i}-desc`];
         
         if (descText) {
-            // Dividimos por saltos de línea, limpiamos espacios y removemos el caracter '•' viejo
             const bullets = descText.split('\n')
                 .map(bullet => bullet.replace(/^•\s*/, '').trim())
                 .filter(bullet => bullet.length > 0);
             
-            // Construimos la estructura HTML interna de la lista <ul>
             const htmlContent = bullets.map(bullet => `<li>${bullet}</li>`).join('');
             
             descElements.forEach(element => {
@@ -116,16 +114,14 @@ function toggleLanguage() {
     document.querySelectorAll('[data-key]').forEach(element => {
         const key = element.getAttribute('data-key');
         
-        // Si es un contenedor de descripción, dejamos que nuestra función especializada se encargue
         if (key.endsWith('-desc')) return;
 
         if (translations[currentLang] && translations[currentLang][key]) {
-            // Usamos innerHTML para no romper las etiquetas internas de los tooltips (strong, span, small)
+            // Using innerHTML to preserve tooltip structure (strong, span, small markup nodes)
             element.innerHTML = translations[currentLang][key];
         }
     });
 
-    // Forzamos el re-renderizado de las viñetas en el nuevo idioma seleccionado
     renderJobDescriptions();
 }
 
@@ -148,7 +144,7 @@ function switchTimelineJob(index, button) {
     }
 }
 
-// Inicializador automático para cargar las descripciones itemizadas al abrir la web por primera vez
+// Automatically load itemized descriptions on initial page boot load cycles
 document.addEventListener('DOMContentLoaded', () => {
     renderJobDescriptions();
 });

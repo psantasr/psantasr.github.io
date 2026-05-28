@@ -268,17 +268,32 @@ body {
     font-size: 16px;
 }
 
+/* Structural wrapper container housing boundary extreme text labels */
+.slider-timeline-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
+
+/* Static timeline boundary labels at the far ends */
+.timeline-boundary-year {
+    font-size: 14px;
+    font-weight: 700;
+    color: #888888;
+    user-select: none;
+}
+
 /* The horizontal bar tracking backbone */
 .slider-timeline-axis {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    flex: 1;
     height: 4px;
     background-color: #e0e0e0; 
-    margin-bottom: 40px;
-    margin-top: 50px;
 }
 
 /* Bright highlighting progress bar line fill */
@@ -304,7 +319,7 @@ body {
     outline: none;
     z-index: 5;
     padding: 10px;
-    margin: -10px; /* Expands interactive hover area without affecting visual layout structure */
+    margin: -10px; /* Expands interactive hover area without affecting layout */
 }
 
 /* Intersecting dots */
@@ -335,7 +350,7 @@ body {
    -------------------------------------------------------------------------- */
 .timeline-tooltip {
     position: absolute;
-    bottom: 32px; /* Position box floating completely clean above the track line */
+    bottom: 32px; /* Position box floating clean above the track line */
     left: 50%;
     transform: translateX(-50%) translateY(10px);
     width: 260px;
@@ -396,7 +411,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   TAB PANELS DISPLAY LAYOUT
+   TAB PANELS DISPLAY LAYOUT (Format: Date above Title, divided by line)
    -------------------------------------------------------------------------- */
 .timeline-display-window {
     position: relative;
@@ -422,27 +437,69 @@ body {
     transform: translateY(0);
 }
 
+/* Flexible header row positioning layout containing the typography blocks and logo frame */
+.job-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f4f4f4; /* The sharp divider line layout */
+}
+
+.job-title-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
 .job-panel-date {
     display: block;
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #888888;
-    margin-bottom: 6px;
 }
 
 .job-panel-title {
     font-size: 20px;
     font-weight: 600;
     color: #222222;
-    margin-bottom: 15px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #f4f4f4;
+    border: none; /* Removing old bottom border rule */
+    padding: 0;
+    margin: 0;
+}
+
+.at-symbol {
+    color: #888888;
+    font-weight: 400;
+    font-size: 18px;
 }
 
 .company-accent {
     color: #335c81;
     font-weight: 700;
+}
+
+/* Logo box container layout metrics */
+.company-logo-frame {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.company-logo-img {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
 }
 
 /* Itemized Unordered List Formatting Configuration */
@@ -480,9 +537,17 @@ body {
     .content-section {
         padding: 60px 20px;
     }
-    .slider-timeline-axis {
-        margin-top: 40px;
-        margin-bottom: 40px;
+    .slider-timeline-container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .job-panel-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .company-logo-frame {
+        order: -1; /* Place logo right at the top on squished mobile viewports */
     }
     .timeline-display-window {
         padding: 15px;
