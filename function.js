@@ -84,38 +84,25 @@ const translations = {
 };
 
 let currentLang = 'en';
-const originalEnglishText = {}; 
 
 function toggleLanguage() {
     const toggleBtn = document.getElementById('lang-toggle');
     const elementsToTranslate = document.querySelectorAll('[data-key]');
 
-    if (Object.keys(originalEnglishText).length === 0) {
-        elementsToTranslate.forEach(element => {
-            const key = element.getAttribute('data-key');
-            originalEnglishText[key] = element.textContent;
-        });
-    }
-
+    // Toggle target state
     if (currentLang === 'en') {
         currentLang = 'es';
         if (toggleBtn) toggleBtn.textContent = "ENG";
-        
-        elementsToTranslate.forEach(element => {
-            const key = element.getAttribute('data-key');
-            if (translations.es[key]) {
-                element.textContent = translations.es[key];
-            }
-        });
     } else {
         currentLang = 'en';
         if (toggleBtn) toggleBtn.textContent = "ESP";
-        
-        elementsToTranslate.forEach(element => {
-            const key = element.getAttribute('data-key');
-            if (translations.en[key]) {
-                element.textContent = translations.en[key];
-            }
-        });
     }
+
+    // Explicit dictionary loop rendering
+    elementsToTranslate.forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (translations[currentLang] && translations[currentLang][key] !== undefined) {
+            element.textContent = translations[currentLang][key];
+        }
+    });
 }
