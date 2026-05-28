@@ -55,74 +55,91 @@
                 </div>
 
                 <div class="hero-image-side">
-                    <img src="gear-illustration.png" alt="Rotating Gear Illustration" class="welcome-gear">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Gear_icon_2.svg" alt="Rotating Gear Illustration" class="welcome-gear">
                 </div>
             </header>
 
-            <!-- SECTION 2: WORK EXPERIENCE TIMELINE -->
             <section id="work experience" class="content-section">
-                <h2 data-key="work experience-heading">Work Experience</h2>
-                <p data-key="work experience-text">Here's what I've done so far.</p>
+                <h2 data-key="work-experience-heading">Work Experience</h2>
+                <p class="section-intro" data-key="work-experience-text">Here's what I've done so far.</p>
 
-                <div class="timeline-container">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="job-date" data-key="job1-date">August 2024 - Current</span>
-                            <h3 class="job-title" data-key="job1-title">Product Development Engineer</h3>
-                            <h4 class="job-company" data-key="job1-company">Spin Master Ltd.</h4>
-                            <p class="job-description" data-key="job1-desc">
+                <div class="horizontal-timeline-wrapper">
+                    
+                    <div class="slider-timeline-axis">
+                        <div class="timeline-progress-bar" id="timelineProgress"></div>
+                        
+                        <button class="slider-node active" onclick="switchTimelineJob(0, this)">
+                            <span class="node-year">2024</span>
+                            <div class="node-indicator-dot"></div>
+                        </button>
+                        <button class="slider-node" onclick="switchTimelineJob(1, this)">
+                            <span class="node-year">2023</span>
+                            <div class="node-indicator-dot"></div>
+                        </button>
+                        <button class="slider-node" onclick="switchTimelineJob(2, this)">
+                            <span class="node-year">2022</span>
+                            <div class="node-indicator-dot"></div>
+                        </button>
+                        <button class="slider-node" onclick="switchTimelineJob(3, this)">
+                            <span class="node-year">2021</span>
+                            <div class="node-indicator-dot"></div>
+                        </button>
+                    </div>
+
+                    <div class="timeline-display-window">
+                        
+                        <div class="job-card-panel active" id="jobPanel-0">
+                            <span class="job-panel-date" data-key="job1-date">August 2024 - Current</span>
+                            <h3 class="job-panel-title">
+                                <span data-key="job1-title">Product Development Engineer</span> @ <span class="company-accent" data-key="job1-company">Spin Master Ltd.</span>
+                            </h3>
+                            <p class="job-panel-desc" data-key="job1-desc">
                                 Leading the development of 15+ medium to high complexity toy products from concept to production, ensuring timelines, cost targets, and technical feasibility are met. Utilizing SolidWorks and Onshape to build complex 3D models and optimizing parts using DFMA/DFM principles to achieve significant cost savings per unit.
                             </p>
                         </div>
-                    </div>
 
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="job-date" data-key="job2-date">June 2023 - August 2024</span>
-                            <h3 class="job-title" data-key="job2-title">R&D Mechanical Engineer</h3>
-                            <h4 class="job-company" data-key="job2-company">Sunnybrook Hospital Research Institute (FUS Lab)</h4>
-                            <p class="job-description" data-key="job2-desc">
+                        <div class="job-card-panel" id="jobPanel-1">
+                            <span class="job-panel-date" data-key="job2-date">June 2023 - August 2024</span>
+                            <h3 class="job-panel-title">
+                                <span data-key="job2-title">R&D Mechanical Engineer</span> @ <span class="company-accent" data-key="job2-company">Sunnybrook Hospital Research Institute (FUS Lab)</span>
+                            </h3>
+                            <p class="job-panel-desc" data-key="job2-desc">
                                 Collaborated with researchers and engineers to design and prototype custom components for experimental setups supporting focused ultrasound therapies. Created patient-centric molds and parts compliant with strict MRI and clinical environments using SolidWorks, 3D printing, and machining tools.
                             </p>
                         </div>
-                    </div>
 
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="job-date" data-key="job3-date">May 2022 - August 2022</span>
-                            <h3 class="job-title" data-key="job3-title">Engineering Innovation Intern</h3>
-                            <h4 class="job-company" data-key="job3-company">Spin Master Ltd.</h4>
-                            <p class="job-description" data-key="job3-desc">
+                        <div class="job-card-panel" id="jobPanel-2">
+                            <span class="job-panel-date" data-key="job3-date">May 2022 - August 2022</span>
+                            <h3 class="job-panel-title">
+                                <span data-key="job3-title">Engineering Innovation Intern</span> @ <span class="company-accent" data-key="job3-company">Spin Master Ltd.</span>
+                            </h3>
+                            <p class="job-panel-desc" data-key="job3-desc">
                                 Designed and prototyped proof-of-concept mechanisms using SolidWorks, Fusion 360, and 3D printing. Achieved manufacturing cost reductions by optimizing material utilization and combining mechanical functions within structural CAD designs.
                             </p>
                         </div>
-                    </div>
 
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="job-date" data-key="job4-date">May 2021 - May 2022</span>
-                            <h3 class="job-title" data-key="job4-title">Product Development Engineering Intern</h3>
-                            <h4 class="job-company" data-key="job4-company">Spin Master Ltd.</h4>
-                            <p class="job-description" data-key="job4-desc">
+                        <div class="job-card-panel" id="jobPanel-3">
+                            <span class="job-panel-date" data-key="job4-date">May 2021 - May 2022</span>
+                            <h3 class="job-panel-title">
+                                <span data-key="job4-title">Product Development Engineering Intern</span> @ <span class="company-accent" data-key="job4-company">Spin Master Ltd.</span>
+                            </h3>
+                            <p class="job-panel-desc" data-key="job4-desc">
                                 Managed 90+ projects across two consumer brands, providing early-stage cost estimation and feasibility studies. Led design alignment checkpoints with international global teams to proactively resolve manufacturing challenges and minimize production delays.
                             </p>
                         </div>
+
                     </div>
                 </div>
             </section>
 
             <section id="projects" class="content-section">
                 <h2 data-key="projects-heading">My Projects</h2>
-                <p data-key="projects-text">Check out my latest work and case studies below.</p>
+                <p class="section-intro" data-key="projects-text">Check out my latest work and case studies below.</p>
             </section>
 
             <section id="contact" class="content-section">
                 <h2 data-key="contact-heading">Get In Touch</h2>
-                <p data-key="contact-text">Email me at: myemail@example.com</p>
+                <p class="section-intro" data-key="contact-text">Email me at: paulasantas@outlook.com</p>
             </section>
 
         </div>

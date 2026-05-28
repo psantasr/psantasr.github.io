@@ -253,6 +253,151 @@ body {
     line-height: 1.6;
 }
 
+/* ==========================================================================
+   DYNAMIC HORIZONTAL TIMELINE RULES (Patrick's Layout)
+   ========================================================================== */
+.horizontal-timeline-wrapper {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-intro {
+    color: #666666;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* The horizontal bar tracking backbone */
+.slider-timeline-axis {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 4px;
+    background-color: #e0e0e0; 
+    margin-bottom: 60px;
+    margin-top: 50px;
+}
+
+/* Bright highlighting progress bar line fill */
+.timeline-progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%; /* Adjusted via JS calculations */
+    height: 100%;
+    background-color: #335c81; 
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Interactive Node Button Handles */
+.slider-node {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: none;
+    z-index: 5;
+    padding: 0;
+}
+
+/* Year indicators floating above spine tracks */
+.node-year {
+    font-size: 14px;
+    font-weight: 700;
+    color: #888888;
+    margin-bottom: 10px;
+    position: absolute;
+    top: -32px;
+    transition: color 0.3s ease;
+}
+
+/* Intersecting dots */
+.node-indicator-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #b0b0b0;
+    border: 2px solid #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Hover and active element status state rules */
+.slider-node:hover .node-indicator-dot {
+    background-color: #335c81;
+    transform: scale(1.1);
+}
+
+.slider-node.active .node-year {
+    color: #111111;
+}
+
+.slider-node.active .node-indicator-dot {
+    background-color: #335c81; 
+    transform: scale(1.3);
+    border-color: #ffffff;
+}
+
+/* Tab Deck Window Shells */
+.timeline-display-window {
+    position: relative;
+    min-height: 220px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Hidden by default state structure */
+.job-card-panel {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* Fired visible by active state engine class */
+.job-card-panel.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.job-panel-date {
+    display: block;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888888;
+    margin-bottom: 6px;
+}
+
+.job-panel-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+.company-accent {
+    color: #335c81;
+    font-weight: 700;
+}
+
+.job-panel-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444444;
+}
+
 /* Mobile Responsiveness Rules */
 @media (max-width: 768px) {
     .page-frame {
@@ -274,5 +419,12 @@ body {
     }
     .content-section {
         padding: 60px 20px;
+    }
+    .slider-timeline-axis {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .timeline-display-window {
+        padding: 15px;
     }
 }

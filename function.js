@@ -106,3 +106,39 @@ function toggleLanguage() {
         }
     });
 }
+
+// ==========================================================================
+// HORIZONTAL SLIDER TIMELINE CONTROLLER ENGINE (Patrick's Layout)
+// ==========================================================================
+function switchTimelineJob(panelIndex, selectedNode) {
+    // 1. Clear active tags across all slider nodes
+    const allNodes = document.querySelectorAll('.slider-node');
+    allNodes.forEach(node => node.classList.remove('active'));
+
+    // 2. Set active target style onto clicked node
+    selectedNode.classList.add('active');
+
+    // 3. Clear visibility states off all information decks
+    const allPanels = document.querySelectorAll('.job-card-panel');
+    allPanels.forEach(panel => panel.classList.remove('active'));
+
+    // 4. Reveal targeted container layout safely
+    const targetPanel = document.getElementById(`jobPanel-${panelIndex}`);
+    if (targetPanel) {
+        targetPanel.classList.add('active');
+    }
+
+    // 5. Calculate progressive timeline tracking line width fill metrics
+    const progressBar = document.getElementById('timelineProgress');
+    if (progressBar && allNodes.length > 1) {
+        const totalNodes = allNodes.length - 1;
+        const progressPercentage = (panelIndex / totalNodes) * 100;
+        progressBar.style.width = `${progressPercentage}%`;
+    }
+}
+
+// Guarantee the initial loading view defaults progress bar line fill states to zero
+document.addEventListener("DOMContentLoaded", () => {
+    const progressBar = document.getElementById('timelineProgress');
+    if (progressBar) progressBar.style.width = "0%";
+});
