@@ -98,3 +98,22 @@ function toggleLanguage() {
         }
     });
 }
+
+function switchTimelineJob(index, button) {
+    const panels = document.querySelectorAll('.job-card-panel');
+    const nodes = document.querySelectorAll('.slider-node');
+    const progressBar = document.getElementById('timelineProgress');
+
+    panels.forEach((panel, panelIndex) => {
+        panel.classList.toggle('active', panelIndex === index);
+    });
+
+    nodes.forEach((node, nodeIndex) => {
+        node.classList.toggle('active', nodeIndex === index);
+    });
+
+    if (progressBar && nodes.length > 1) {
+        const percent = (index / (nodes.length - 1)) * 100;
+        progressBar.style.width = `${percent}%`;
+    }
+}
