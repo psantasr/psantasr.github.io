@@ -11,29 +11,29 @@ const translations = {
         "work-experience-heading": "Work Experience",
         "work-experience-text": "Here's what I've done so far.",
         
-        // Job 1
+        // Job 1 (Product Development Engineer)
         "job1-date": "August 2024 - Current",
         "job1-title": "Product Development Engineer",
         "job1-company": "Spin Master Ltd.",
-        "job1-desc": "- Leading the development of over 15+ medium to high complexity toy products from concept to production, ensuring each is delivered on time, on cost, and on spec by actively managing timelines, cost, and technical feasibility. - Created and revised complex 3D models and assemblies using SolidWorks and Onshape, supporting iterative design reviews,                                 internal CAD Checkpoints, and tooling development with internal teams and overseas manufacturers. - Applied DFMA/DFM principles to optimize injection- and blow-molded parts, reducing part complexity and achieving average cost savings of 10% per unit through material and tooling adjustments while still meeting spec. - Collaborated with Asia, North America, and Europe-based vendors to resolve design-for-manufacturing issues, ensuring alignment between CAD intent and production capabilities while minimizing tooling delays. - Drafted critical to consumer requirements, reviewed part quotations, and helped the internal team aligned on feature priorities to support the sourcing team with price negotiations with the vendor. - Provided regular updates to executive stakeholders on design iterations, play pattern feasibility, cost status, and redesign timelines, directly influencing decision-making at cross-functional checkpoints.",
+        "job1-desc": "· Leading the development of over 15+ medium to high complexity toy products from concept to production, ensuring each is delivered on time, on cost, and on spec by actively managing timelines, cost, and technical feasibility. \n · Created and revised complex 3D models and assemblies using SolidWorks and Onshape, supporting iterative design reviews, internal CAD Checkpoints, and tooling development with internal teams and overseas manufacturers.\n · Applied DFMA/DFM principles to optimize injection- and blow-molded parts, reducing part complexity and achieving average cost savings of 10% per unit through material and tooling adjustments while still meeting spec. \n · Collaborated with Asia, North America, and Europe-based engineering, design, marketing, and quality assurance teams to resolve complex production challenges and maintain launch schedules.",
         
-        // Job 2
+        // Job 2 (R&D Mechanical Engineer)
         "job2-date": "June 2023 - August 2024",
         "job2-title": "R&D Mechanical Engineer",
         "job2-company": "Sunnybrook Hospital Research Institute (FUS Lab)",
-        "job2-desc": "Collaborated with researchers and engineers to design and prototype custom components for experimental setups supporting focused ultrasound therapies. Created patient-centric molds and parts compliant with strict MRI and clinical environments using SolidWorks, 3D printing, and machining tools.",
+        "job2-desc": "<li>Collaborated with researchers and engineers to define design goals and constraints for precision sub-assemblies supporting focused ultrasound therapies.</li><li>Designed, built, and tested custom plastic and metal components and clinical jigs using SolidWorks, ensuring high mechanical precision and strict compliance with MRI and clinical cleanroom environments.</li><li>Utilized additive manufacturing (3D printing) and in-house machining tools to construct and iterate functional experimental prototypes quickly.</li><li>Contributed technical data and design files to clinical research studies progressing toward first-in-human medical trials.</li>",
         
-        // Job 3
+        // Job 3 (Engineering Innovation Intern)
         "job3-date": "May 2022 - August 2022",
         "job3-title": "Engineering Innovation Intern",
         "job3-company": "Spin Master Ltd.",
-        "job3-desc": "Designed and prototyped proof-of-concept mechanisms using SolidWorks, Fusion 360, and 3D printing. Achieved manufacturing cost reductions by optimizing material utilization and combining mechanical functions within structural CAD designs.",
+        "job3-desc": "<li>Designed and prototyped proof-of-concept mechanisms using SolidWorks, Fusion 360, 3D printing, and foam molding techniques.</li><li>Achieved manufacturing cost reductions by minimizing material utilization and combining mechanical functions within structural CAD designs.</li><li>Collaborated cross-functionally across engineering teams to prepare presentation-ready functional prototypes and support cost-efficient innovative design tracks.</li>",
         
-        // Job 4
+        // Job 4 (Product Development Engineering Intern)
         "job4-date": "May 2021 - May 2022",
         "job4-title": "Product Development Engineering Intern",
         "job4-company": "Spin Master Ltd.",
-        "job4-desc": "Managed 90+ projects across two consumer brands, providing early-stage cost estimation and feasibility studies. Led design alignment checkpoints with international global teams to proactively resolve manufacturing challenges and minimize production delays.",
+        "job4-desc": "<li>Managed 90+ projects across two consumer brands, providing early-stage cost estimation and feasibility studies within 10% accuracy.</li><li>Led design alignment checkpoints with global teams to proactively resolve engineering challenges, minimize production modifications, and prevent tooling line delays.</li><li>Supported structural cost-saving initiatives and part refinements presented directly to executives and integrated into broad planning cycles.</li>",
 
         "projects-heading": "My Projects",
         "projects-text": "Check out my latest work and case studies below.",
@@ -56,25 +56,25 @@ const translations = {
         "job1-date": "Agosto 2024 - Presente",
         "job1-title": "Ingeniera de Desarrollo de Productos",
         "job1-company": "Spin Master Ltd.",
-        "job1-desc": "Liderando el desarrollo de más de 15 productos de juguetes de mediana a alta complejidad desde el concepto hasta la producción. Uso de SolidWorks y Onshape para el modelado 3D avanzado, aplicando principios de DFMA/DFM para optimizar piezas moldeadas por inyección y soplado, logrando ahorros promedio del 10% por unidad.",
+        "job1-desc": "<li>Liderando el desarrollo de más de 15 productos de juguetes de mediana a alta complejidad desde el concepto hasta la producción, asegurando que se entreguen a tiempo, en costo y bajo especificaciones mediante la gestión de cronogramas y viabilidad técnica.</li><li>Creación y revisión de modelos 3D y ensamblajes complejos utilizando SolidWorks y Onshape, apoyando revisiones de diseño iterativas, puntos de control de CAD internos y desarrollo de moldes con fabricantes extranjeros.</li><li>Aplicación de principios DFMA/DFM para optimizar piezas moldeadas por inyección y soplado, reduciendo la complejidad de los componentes y logrando ahorros promedio del 10% por unidad.</li><li>Colaboración con equipos de ingeniería, diseño, marketing y control de calidad basados en Asia, Norteamérica y Europa para resolver desafíos de producción y cumplir los plazos de lanzamiento.</li>",
         
         // Job 2 (ES)
         "job2-date": "Junio 2023 - Agosto 2024",
         "job2-title": "Ingeniera Mecánica de R&D",
         "job2-company": "Sunnybrook Hospital Research Institute (FUS Lab)",
-        "job2-desc": "Colaboración con investigadores y científicos para diseñar componentes a medida en entornos de pruebas de terapias de ultrasonido focalizado. Diseño y prototipado de moldes y utillajes compatibles con ambientes clínicos y de resonancia magnética (RMN) mediante impresión 3D y mecanizado interno.",
+        "job2-desc": "<li>Colaboración con investigadores y científicos para definir objetivos de diseño y restricciones en subensamblajes de precisión para terapias de ultrasonido focalizado.</li><li>Diseño y prototipado de componentes plásticos, metálicos y utillajes clínicos a medida mediante SolidWorks, garantizando alta precisión mecánica y cumplimiento con entornos de resonancia magnética (RMN) y salas limpias.</li><li>Utilización de manufactura aditiva (impresión 3D) y herramientas de mecanizado interno para construir e iterar prototipos experimentales funcionales de manera rápida.</li><li>Aportación de datos técnicos y archivos de diseño para estudios de investigación clínica orientados a los primeros ensayos médicos en humanos.</li>",
         
         // Job 3 (ES)
         "job3-date": "Mayo 2022 - Agosto 2022",
         "job3-title": "Pasante de Innovación en Ingeniería",
         "job3-company": "Spin Master Ltd.",
-        "job3-desc": "Diseño y desarrollo de prototipos para mecanismos de prueba de concepto utilizando SolidWorks, Fusion 360 e impresión 3D. Reducción de costos de producción optimizando el uso de material y combinando funciones mecánicas en archivos CAD complejos.",
+        "job3-desc": "<li>Diseño y desarrollo de prototipos para mecanismos de prueba de concepto utilizando SolidWorks, Fusion 360, impresión 3D y técnicas de moldeo de espuma.</li><li>Reducción de costos de producción mediante la minimización del uso de material y combinando funciones mecánicas en diseños estructurales de CAD revisados.</li><li>Colaboración interfuncional con equipos de ingeniería para preparar prototipos funcionales listos para presentaciones ejecutivas y apoyar soluciones de diseño innovadoras.</li>",
         
         // Job 4 (ES)
         "job4-date": "Mayo 2021 - Mayo 2022",
         "job4-title": "Pasante de Ingeniería de Desarrollo de Productos",
         "job4-company": "Spin Master Ltd.",
-        "job4-desc": "Gestión de más de 90 proyectos para evaluar la viabilidad técnica y estimación de costos en etapas tempranas con una precisión del 10%. Liderazgo en reuniones de alineación con equipos de manufactura globales en Asia para evitar retrasos en herramientas de producción.",
+        "job4-desc": "<li>Gestión de más de 90 proyectos para evaluar la viabilidad técnica y estimación de costos en etapas tempranas con una precisión del 10% para dos marcas de consumo.</li><li>Liderazgo en reuniones de alineación de diseño con equipos globales para resolver proactivamente desafíos de manufactura y evitar retrasos en las líneas de herramental de producción.</li><li>Apoyo en iniciativas estructurales de ahorro de costos y refinamiento de productos presentados directamente a ejecutivos.</li>",
 
         "projects-heading": "Mis Proyectos",
         "projects-text": "Mira mis últimos trabajos y casos de estudio abajo.",
@@ -82,63 +82,3 @@ const translations = {
         "contact-text": "Envíame un correo a: paulasantas@outlook.com"
     }
 };
-
-let currentLang = 'en';
-
-function toggleLanguage() {
-    const toggleBtn = document.getElementById('lang-toggle');
-    const elementsToTranslate = document.querySelectorAll('[data-key]');
-
-    // Toggle target state
-    if (currentLang === 'en') {
-        currentLang = 'es';
-        if (toggleBtn) toggleBtn.textContent = "ENG";
-    } else {
-        currentLang = 'en';
-        if (toggleBtn) toggleBtn.textContent = "ESP";
-    }
-
-    // Explicit dictionary loop rendering
-    elementsToTranslate.forEach(element => {
-        const key = element.getAttribute('data-key');
-        if (translations[currentLang] && translations[currentLang][key] !== undefined) {
-            element.textContent = translations[currentLang][key];
-        }
-    });
-}
-
-// ==========================================================================
-// HORIZONTAL SLIDER TIMELINE CONTROLLER ENGINE (Patrick's Layout)
-// ==========================================================================
-function switchTimelineJob(panelIndex, selectedNode) {
-    // 1. Clear active tags across all slider nodes
-    const allNodes = document.querySelectorAll('.slider-node');
-    allNodes.forEach(node => node.classList.remove('active'));
-
-    // 2. Set active target style onto clicked node
-    selectedNode.classList.add('active');
-
-    // 3. Clear visibility states off all information decks
-    const allPanels = document.querySelectorAll('.job-card-panel');
-    allPanels.forEach(panel => panel.classList.remove('active'));
-
-    // 4. Reveal targeted container layout safely
-    const targetPanel = document.getElementById(`jobPanel-${panelIndex}`);
-    if (targetPanel) {
-        targetPanel.classList.add('active');
-    }
-
-    // 5. Calculate progressive timeline tracking line width fill metrics
-    const progressBar = document.getElementById('timelineProgress');
-    if (progressBar && allNodes.length > 1) {
-        const totalNodes = allNodes.length - 1;
-        const progressPercentage = (panelIndex / totalNodes) * 100;
-        progressBar.style.width = `${progressPercentage}%`;
-    }
-}
-
-// Guarantee the initial loading view defaults progress bar line fill states to zero
-document.addEventListener("DOMContentLoaded", () => {
-    const progressBar = document.getElementById('timelineProgress');
-    if (progressBar) progressBar.style.width = "0%";
-});
