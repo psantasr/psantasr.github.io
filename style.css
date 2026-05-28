@@ -396,6 +396,7 @@ body {
     font-size: 15px;
     line-height: 1.7;
     color: #444444;
+    white-space: pre-line;
 }
 
 /* Mobile Responsiveness Rules */
