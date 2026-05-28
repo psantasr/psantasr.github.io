@@ -142,6 +142,27 @@ body {
     margin-top: 30px;
 }
 
+/* Style the resume SVG Link */
+.resume-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 30px;
+    height: 36px;
+}
+
+.resume-svg {
+    width: 100%; 
+    height: 100%;
+    fill: #111111; /* Clean dark gray outline appearance */
+    transition: transform 0.2s ease;
+}
+
+.resume-svg:hover {
+    transform: scale(1.12); /* Sleek hover pop */
+}
+
 /* Style the LinkedIn SVG Link */
 .linkedin-icon-link {
     display: inline-flex;
